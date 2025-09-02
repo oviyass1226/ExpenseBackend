@@ -6,11 +6,11 @@ const Expense = require('./model/schema')
 const cors = require("cors")
 require("dotenv").config()
 
-const PORT = process.env.PORT || 7777;
+const PORT = process.env.PORT || 4444;
 
 app.use(cors())
 
-app.get("/student",async(req,res)=>{
+app.get("/get",async(req,res)=>{
     try {
         const expense = await Expense.find();
         res.json({message:"Expense retrieved successfully",expense})
@@ -44,6 +44,6 @@ app.delete("/delete/:id",async (req,res)=>{
 })
 
 
-app.listen(PORT,()=>{
+app.listen(PORT,"0.0.0.0",()=>{
     console.log(`Server is running on port ${PORT}`)
 })

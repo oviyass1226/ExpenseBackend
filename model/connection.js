@@ -4,5 +4,5 @@ mongoose.connect("mongodb+srv://oviyaec23_db_user:jeevaovi2612@cluster0.dgu4bk2.
     console.log("Connected successfully")
 })
 .catch((error)=>{
-    console.log("connection failed")
+    console.log(error)
 })
