@@ -4,7 +4,9 @@ app.use(express.json())
 require('./model/connection')
 const Expense = require('./model/schema')
 const cors = require("cors")
-const port = 7777;
+const port = 5555;
+
+// const PORT = process.env.PORT || 7777;
 
 app.use(cors())
 
