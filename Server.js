@@ -4,9 +4,9 @@ app.use(express.json())
 require('./model/connection')
 const Expense = require('./model/schema')
 const cors = require("cors")
-const port = 5555;
+require("dotenv").config()
 
-// const PORT = process.env.PORT || 7777;
+const PORT = process.env.PORT || 7777;
 
 app.use(cors())
 
@@ -44,6 +44,6 @@ app.delete("/delete/:id",async (req,res)=>{
 })
 
 
-app.listen(port,()=>{
-    console.log(`Server is running on port ${port}`)
+app.listen(PORT,()=>{
+    console.log(`Server is running on port ${PORT}`)
 })
